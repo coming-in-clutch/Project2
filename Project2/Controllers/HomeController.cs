@@ -135,7 +135,7 @@ namespace Project2.Controllers
             return View();
         }
 
-        //[Authorize]
+        [Authorize]
         public ActionResult SelectedMission(int? missionID)
         {
 
