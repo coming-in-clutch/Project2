@@ -211,8 +211,9 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Images\anderson.jpg" />
     <Content Include="Content\Images\eyring.jpg" />
-    <Content Include="Content\Images\mexico.jpg" />
-    <Content Include="Content\Images\PennsylvaniaFlag.png" />
+    <Content Include="Content\Images\Mexico Aguas Calientes.jpg" />
+    <Content Include="Content\Images\Mexico Saltillo.jpg" />
+    <Content Include="Content\Images\Tahiti Papeete.jpg" />
     <Content Include="Content\Images\TaiwanFlag.png" />
     <Content Include="Content\Images\TennesseeFlag.jpg" />
     <Content Include="favicon.ico" />
