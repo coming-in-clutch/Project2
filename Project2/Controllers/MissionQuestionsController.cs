@@ -60,7 +60,7 @@ namespace Project2.Controllers
 
             db.MissionQuestion.Add(missionQuestions);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("SelectedMission");
         }
 
         // GET: MissionQuestions/Edit/5

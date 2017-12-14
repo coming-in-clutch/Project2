@@ -51,8 +51,7 @@ namespace Project2.Controllers
         {
             ViewBag.Mission = db.Mission.ToList();
 
-            //IEnumerable<Missions> missions = db.Database.SqlQuery<Missions>("SELECT * " +
-            //"FROM Missions");
+
 
             return View();
 
@@ -144,7 +143,12 @@ namespace Project2.Controllers
             Missions mission = db.Mission.Find(missionID);
 
             ViewBag.Mission = mission;
-            return View();
+
+            IEnumerable<MissionQuestions> missions = db.Database.SqlQuery<MissionQuestions>("SELECT missionQuestionID, missionID, userID, question, answer " +
+            "FROM MissionQuestions " +
+
+            "WHERE MissionID = '" + missionID + "'");
+            return View(missions);
         }
     }
 }

@@ -211,6 +211,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Images\anderson.jpg" />
     <Content Include="Content\Images\eyring.jpg" />
+    <Content Include="Content\Images\mexico.jpg" />
     <Content Include="Content\Images\PennsylvaniaFlag.png" />
     <Content Include="Content\Images\TaiwanFlag.png" />
     <Content Include="Content\Images\TennesseeFlag.jpg" />
@@ -273,7 +274,6 @@
     <Content Include="Views\Home\NewAccount.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Home\Missions.cshtml" />
-    <Content Include="Views\Home\PRactice.cshtml" />
     <Content Include="Views\MissionQuestions\Create.cshtml" />
     <Content Include="Views\MissionQuestions\Delete.cshtml" />
     <Content Include="Views\MissionQuestions\Details.cshtml" />

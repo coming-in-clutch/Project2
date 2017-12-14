@@ -8,8 +8,6 @@
 
 
 
-@Html.ActionLink("Other Controller", "Index", "MissionQuestions")
-
 @Html.BeginForm("SelectedMission", "Home", FormMethod.Post)
     <div class="form-group">
         @Html.LabelFor(model => model.missionID, htmlAttributes: new { @class = "control-label col-md-2" })
