@@ -1,0 +1,76 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<!--AUSTIN BIRD, BRITTANY ROWE, JULIAN SOOKHOO, KARLI ELLIS-->
+<!--bootstrap breadcrumbs-->
+<nav aria-label="breadcrumb" role="navigation">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item active" aria-current="page">Home</li>
+    </ol>
+</nav>
+
+<!--Call to action-->
+<div class="bs-calltoaction bs-calltoaction-default jumbotron">
+    <div class="row">
+        <div class="col-md-9 cta-contents">
+            <h1 class="cta-title">Discover Your Mission</h1>
+            <div class="cta-desc">
+                <p>You've been called. Now what?</p>
+            </div>
+        </div>
+        <div class="col-md-3 cta-button">
+            @Html.ActionLink("Learn More", "Missions", null, new { @class = "btn btn-lg btn-block btn-primary" })
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <!--mission video-->
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/3aKU2rkvFQU" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+<br /> <br />
+
+<!--mission quotes-->
+<div class="row">
+    <div class="col-md-4">
+        <h3 class="text-danger">
+            See that you serve with all your heart, might, mind, and strength
+        </h3>
+
+        <p>
+            D&C 4:2
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h3 class="text-danger">
+            Go and serve knowing that you are not alone
+        </h3>
+        <p>
+            Henry B. Erying
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h3 class="text-danger">
+            After all that has been said, the greatest and most important duty is to preach the gospel
+        </h3>
+        <p>
+            - Joseph Smith
+        </p>
+    </div>
+</div>
+
+<!--mission images/quotes-->
+<div class="row">
+    <div class="col-md-6">
+        <h2 class="text-center">Everyone is a Missionary</h2>
+        <img class="img-responsive" src="~/Content/images/eyring.jpg" />
+    </div>
+    <div class="col-md-6">
+        <h2 class="text-center">Paint a Badge on Your Heart</h2>
+        <img class="img-responsive" src="~/Content/images/anderson.jpg" />
+    </div>
+</div>
+<br />

@@ -1,0 +1,22 @@
+﻿@model Project2.Models.Missions
+
+@{
+    ViewBag.Title = "Missions";
+}
+
+<h2>Missions</h2>
+
+
+
+@Html.ActionLink("Other Controller", "Index", "MissionQuestions")
+
+@Html.BeginForm("SelectedMission", "Home", FormMethod.Post)
+    <div class="form-group">
+        @Html.LabelFor(model => model.missionID, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+           @Html.DropDownListFor(model => model.missionID, new SelectList(ViewBag.Mission, "missionID", "missionName"))
+       
+            @Html.ValidationMessageFor(model => model.missionID, "", new { @class = "text-danger" })
+        </div>
+        <input type="submit" value="submit" />
+    </div> 

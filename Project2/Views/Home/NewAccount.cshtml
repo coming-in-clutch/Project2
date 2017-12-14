@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "New Account";
+}
+
+<h2>New account</h2>
+
+<form>
+    <label>E-mail Address</label>
+    <input type="email" />
+    <br />
+    <label>Password</label>
+    <input type="text" />
+    <br />
+    @Html.ActionLink("Submit", "Index", "Home", new { @class = "btn btn-primary btn-sm" })
+
+</form>
+
+
+@*@Html.ActionLink("Create New Account", "NewAccount", "Home")*@
+

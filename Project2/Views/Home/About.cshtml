@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+
+<!--bootstrap breadcrumbs-->
+<nav aria-label="breadcrumb" role="navigation">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">@Html.ActionLink("Home", "Index")</li>
+        <li class="breadcrumb-item active" aria-current="page">About</li>
+    </ol>
+</nav>
+
+<h2>@ViewBag.Title</h2>
+
+<!--About the company-->
+<p>
+    Missions are an amazing experience and opportunity to serve!
+    That being said, the only way to get information about the mission has been to actually find individual
+    who served in your mission and ask them questions.
+    <br /><br />
+    Coming In Clutch aims to make the question answering process easier, by allowing future missionaries
+    to ask questions about specific missions.
+    Returned missionaries from that mission then answer the questions of the future missionaries, allowing
+    the future missionaries (and their parents) to have some peace of mind with some of the harder to
+    answer questions.
+    <br /><br />
+    Additionally, anyone can view the questions that have already been answered by RMs about their
+    respective missions!
+</p>

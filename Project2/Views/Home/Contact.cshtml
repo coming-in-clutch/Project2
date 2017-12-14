@@ -1,0 +1,51 @@
+﻿@{
+    ViewBag.Title = "Contact Us";
+}
+<h2>@ViewBag.Title</h2>
+<h3>@ViewBag.Message</h3>
+
+@* The contact view will have basic company information, such as phone number and email. The view will also have a contact form that will have
+    fields for the user’s name, email, subject(choose from a list), and message body. There will need to be a submit button at the bottom of the
+    contact form. This button however, won’t do anything with the data yet. For now it will just clear the text in the form. *@
+
+<!--bootstrap breadcrumbs-->
+<nav aria-label="breadcrumb" role="navigation">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">@Html.ActionLink("Home", "Index")</li>
+        <li class="breadcrumb-item active" aria-current="page">Contact</li>
+    </ol>
+</nav>
+
+<!--company address-->
+<address>
+    555 Missionary Street<br />
+    Salt Lake City, UT 84044<br />
+    <abbr title="Phone">Phone:</abbr>
+    123.456.7890
+</address>
+
+<!--Company contact form-->
+<form>
+    <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" id="name" placeholder="First and Last Name" />
+    </div>
+    <div class="form-group">
+        <label for="email">E-mail Address:</label>
+        <input type="email" class="form-control" id="email" placeholder="name@example.com">
+    </div>
+    <div class="form-group">
+        <label for="subject">Subject:</label>
+        <select class="form-control" id="subject">
+            <option>Mission Preparation</option>
+            <option>Mission Schedule</option>
+            <option>Mission Attire</option>
+            <option>Other</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="message">Notes here:</label>
+        <textarea class="form-control" id="message" placeholder="Leave any notes here"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
