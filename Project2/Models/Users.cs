@@ -7,8 +7,8 @@ using System.Web;
 
 namespace Project2.Models
 {
-    [Table("Users")]
-    public class Users
+    [Table("User")]
+    public class User
     {
         [Key]
         public int userID { get; set; }
