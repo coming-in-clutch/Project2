@@ -21,20 +21,20 @@ namespace Project2.Controllers
             return View(db.MissionQuestion.ToList());
         }
 
-        // GET: MissionQuestions/Details/5
-        public ActionResult Details(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            MissionQuestions missionQuestions = db.MissionQuestion.Find(id);
-            if (missionQuestions == null)
-            {
-                return HttpNotFound();
-            }
-            return View(missionQuestions);
-        }
+        //// GET: MissionQuestions/Details/5
+        //public ActionResult Details(int? id)
+        //{
+        //    if (id == null)
+        //    {
+        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+        //    }
+        //    MissionQuestions missionQuestions = db.MissionQuestion.Find(id);
+        //    if (missionQuestions == null)
+        //    {
+        //        return HttpNotFound();
+        //    }
+        //    return View(missionQuestions);
+        //}
 
         // GET: MissionQuestions/Create
         public ActionResult Create()
@@ -47,7 +47,7 @@ namespace Project2.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "missionQuestionID,missionID,userID,question,answer")] MissionQuestions missionQuestions)
+        public ActionResult Create([Bind(Include = "missionQuestionID, missionID,missionName, userID,question,answer")] MissionQuestions missionQuestions)
         {
             //if (ModelState.IsValid)
             //{
@@ -60,7 +60,7 @@ namespace Project2.Controllers
 
             db.MissionQuestion.Add(missionQuestions);
             db.SaveChanges();
-            return RedirectToAction("SelectedMission");
+            return RedirectToAction("Missions", "Home");
         }
 
         // GET: MissionQuestions/Edit/5
@@ -75,6 +75,7 @@ namespace Project2.Controllers
             {
                 return HttpNotFound();
             }
+
             return View(missionQuestions);
         }
 

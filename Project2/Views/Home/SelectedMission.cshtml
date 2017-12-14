@@ -47,6 +47,9 @@
 <table class="table">
     <tr>
         <th>
+            @Html.DisplayNameFor(model => model.missionName)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.question)
         </th>
         <th>
@@ -59,6 +62,9 @@
     @foreach (var item in Model)
     {
         <tr>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.missionName)
+            </td>*@
             <td>
                 @Html.DisplayFor(modelItem => item.question)
             </td>
@@ -66,8 +72,7 @@
                 @Html.DisplayFor(modelItem => item.answer)
             </td>
             <td>
-                @Html.ActionLink("Reply to question", "Edit", "MissionQuestions", new { id = item.missionQuestionID }) |
-
+               @Html.ActionLink("whatever","Edit", "MissionQuestions", new { id = item.missionQuestionID }, null) 
             </td>
         </tr>
     }

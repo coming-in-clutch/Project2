@@ -137,6 +137,7 @@ namespace Project2.Controllers
             return View();
         }
 
+        [Authorize]
         public ActionResult SelectedMission(int? missionID)
         {
 
@@ -144,10 +145,10 @@ namespace Project2.Controllers
 
             ViewBag.Mission = mission;
 
-            IEnumerable<MissionQuestions> missions = db.Database.SqlQuery<MissionQuestions>("SELECT missionQuestionID, missionID, userID, question, answer " +
-            "FROM MissionQuestions " +
+            IEnumerable<MissionQuestions> missions = db.Database.SqlQuery<MissionQuestions>("SELECT missionQuestionID, Missions.missionID, missionName, userID, question, answer " +
+            "FROM MissionQuestions INNER JOIN Missions ON Missions.missionID = MissionQuestions.missionID " +
 
-            "WHERE MissionID = '" + missionID + "'");
+            "WHERE MissionQuestions.MissionID = '" + missionID + "'");
             return View(missions);
         }
     }
