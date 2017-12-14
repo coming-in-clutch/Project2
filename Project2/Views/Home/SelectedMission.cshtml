@@ -13,7 +13,7 @@
     <div class="col-md-6">
         <br />
         <br />
-        <b style="font-size:15px;">Mission ID: </b> <i style="font-size:15px;">
+        @*<b style="font-size:15px;">Mission ID: </b> <i style="font-size:15px;">*@
             @*<i style="font-size:15px;">@ViewBag.Mission.missionID</i>
             <br />*@
             <b style="font-size:15px;">Mission Name: </b><i style="font-size:15px;">@ViewBag.Mission.missionName</i>
@@ -46,9 +46,9 @@
 </p>
 <table class="table">
     <tr>
-        <th>
+        @*<th>
             @Html.DisplayNameFor(model => model.missionName)
-        </th>
+        </th>*@
         <th>
             @Html.DisplayNameFor(model => model.question)
         </th>
@@ -72,7 +72,7 @@
                 @Html.DisplayFor(modelItem => item.answer)
             </td>
             <td>
-               @Html.ActionLink("whatever","Edit", "MissionQuestions", new { id = item.missionQuestionID }, null) 
+               @Html.ActionLink("Reply to this question","Edit", "MissionQuestions", new { id = item.missionQuestionID }, null) 
             </td>
         </tr>
     }

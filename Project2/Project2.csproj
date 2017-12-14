@@ -276,7 +276,6 @@
     <Content Include="Views\Home\Missions.cshtml" />
     <Content Include="Views\MissionQuestions\Create.cshtml" />
     <Content Include="Views\MissionQuestions\Delete.cshtml" />
-    <Content Include="Views\MissionQuestions\Details.cshtml" />
     <Content Include="Views\MissionQuestions\Edit.cshtml" />
     <Content Include="Views\MissionQuestions\Index.cshtml" />
     <Content Include="Views\Home\SelectedMission.cshtml" />

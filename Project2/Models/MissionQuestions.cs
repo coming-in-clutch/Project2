@@ -8,7 +8,7 @@ using System.Web;
 
 namespace Project2.Models
 {
-    
+    [Table("MissionQuestions")]
     public class MissionQuestions
     {
         [Key]
@@ -16,8 +16,8 @@ namespace Project2.Models
         
         public int? missionID { get; set; }
 
-        [DisplayName("Mission Name")]    
-        public String missionName { get; set; }
+        //[DisplayName("Mission Name")]    
+        //public String missionName { get; set; }
 
         public int? userID { get; set; }
 

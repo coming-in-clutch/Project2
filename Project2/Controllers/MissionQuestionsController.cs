@@ -47,7 +47,7 @@ namespace Project2.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "missionQuestionID, missionID,missionName, userID,question,answer")] MissionQuestions missionQuestions)
+        public ActionResult Create([Bind(Include = "missionQuestionID, missionID, userID,question,answer")] MissionQuestions missionQuestions)
         {
             //if (ModelState.IsValid)
             //{
@@ -90,7 +90,7 @@ namespace Project2.Controllers
             {
                 db.Entry(missionQuestions).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Missions","Home");
             }
             return View(missionQuestions);
         }
