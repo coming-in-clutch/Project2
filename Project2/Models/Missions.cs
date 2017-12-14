@@ -8,8 +8,8 @@ using System.Web;
 
 namespace Project2.Models
 {
-    [Table("Mission")]
-    public class Mission
+    [Table("Missions")]
+    public class Missions
     {
         [Key]
         [DisplayName("Mission ID")]

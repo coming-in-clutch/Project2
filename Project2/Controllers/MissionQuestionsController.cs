@@ -18,7 +18,7 @@ namespace Project2.Controllers
         // GET: MissionQuestions
         public ActionResult Index(int? missionID)
         {
-            return View(db.MissionQuestions.ToList());
+            return View(db.MissionQuestion.ToList());
         }
 
         //// GET: MissionQuestions/Details/5
@@ -47,7 +47,7 @@ namespace Project2.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "missionQuestionID, missionID, userID,question,answer")] MissionQuestion missionQuestions)
+        public ActionResult Create([Bind(Include = "missionQuestionID, missionID, userID,question,answer")] MissionQuestions missionQuestions)
         {
             //if (ModelState.IsValid)
             //{
@@ -58,7 +58,7 @@ namespace Project2.Controllers
 
             //return View(missionQuestions);
 
-            db.MissionQuestions.Add(missionQuestions);
+            db.MissionQuestion.Add(missionQuestions);
             db.SaveChanges();
             return RedirectToAction("Missions", "Home");
         }
@@ -70,7 +70,7 @@ namespace Project2.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            MissionQuestion missionQuestions = db.MissionQuestions.Find(id);
+            MissionQuestions missionQuestions = db.MissionQuestion.Find(id);
             if (missionQuestions == null)
             {
                 return HttpNotFound();
@@ -84,7 +84,7 @@ namespace Project2.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "missionQuestionID,missionID,userID,question,answer")] MissionQuestion missionQuestions)
+        public ActionResult Edit([Bind(Include = "missionQuestionID,missionID,userID,question,answer")] MissionQuestions missionQuestions)
         {
             if (ModelState.IsValid)
             {
@@ -102,7 +102,7 @@ namespace Project2.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            MissionQuestion missionQuestions = db.MissionQuestions.Find(id);
+            MissionQuestions missionQuestions = db.MissionQuestion.Find(id);
             if (missionQuestions == null)
             {
                 return HttpNotFound();
@@ -115,8 +115,8 @@ namespace Project2.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            MissionQuestion missionQuestions = db.MissionQuestions.Find(id);
-            db.MissionQuestions.Remove(missionQuestions);
+            MissionQuestions missionQuestions = db.MissionQuestion.Find(id);
+            db.MissionQuestion.Remove(missionQuestions);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
